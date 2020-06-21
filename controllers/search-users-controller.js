@@ -6,18 +6,20 @@ const Search = db.user;
 
 
 
-exports.findAll = (req, res) => {
-    const title = req.query.title;
-    var condition = title ? { title: {$regex: new RegExp(title), options: "i"}} : {};
+exports.findOne = (req, res) => {
+    const id = req.query.id;
+    //var condition = title ? { title: {$regex: new RegExp(title), options: "i"}} : {};
 
-    Search.find(condition)
+    Search.findById(condition)
         .then(data => {
-            res.send(data);
+            if(!data)
+             res.status(404).send({ message: "Not found customer with id " + id});
+            else res.send(data);
             })
         .catch(err => {
             res.status(500).send({
                 message:
-                err.message || "Some error occurred while retrieving tutorials."
+                "Some error occurred while retrieving Customer with id= " + id
             });
         });
 
