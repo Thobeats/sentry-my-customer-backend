@@ -5,4 +5,4 @@ const router = express.Router();
 const SearchController = require('../controllers/search-users')
 
 //Maintain the endpoint naming convention
-router.get('/searchUsers', SearchController.findAll);
+router.get('/searchUsers', SearchController.findOne);
