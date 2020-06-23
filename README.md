@@ -21,9 +21,11 @@ Step 6: Check out to the task branch | <code>git checkout -b <NAME_OF_THE_TASK><
 
 Step 1: npm install
 
-Step 2: npm run start
+Step 2: Copy env.example to .env
 
-Step 3: Go to http://localhost:5000
+Step 3: npm run start
+
+Step 4: Go to http://localhost:5000
 
 A welcome message will come up with status code 200
 
@@ -36,7 +38,9 @@ Step 1: Run: git add .
 
 Step 2: Run: git commit -m "< COMMIT MESSAGE >"
 
-Step 3: git push origin < BRANCH_NAME >
+Step 3: git pull upstream develop
+
+Step 4: git push origin < BRANCH_NAME >
 
 Go to the repository https://github.com/hngi/sentry-my-customer-backend
 
@@ -45,3 +49,5 @@ As soon as you get there, you are going to see a green ‘compare and create a p
 Click on it, and type your message, click on create pull request.
 
 If you have any more questions, please check out this resource -> https://www.youtube.com/watch?v=HbSjyU2vf6Y
+
+[![Run on Repl.it](https://repl.it/badge/github/nerdyphil/sentry-my-customer-backend)](https://repl.it/github/nerdyphil/sentry-my-customer-backend)
